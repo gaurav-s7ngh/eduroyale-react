@@ -5,12 +5,14 @@ import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import AuthModal from './components/AuthModal';
 
-// Temporary placeholders for the pages we will build next
-const Home = () => <div style={{ padding: '120px 48px', textAlign: 'center' }}><h1>HOME PAGE</h1></div>;
-const Profile = () => <div style={{ padding: '120px 48px', textAlign: 'center' }}><h1>PROFILE PAGE</h1></div>;
-const Guild = () => <div style={{ padding: '120px 48px', textAlign: 'center' }}><h1>GUILD PAGE</h1></div>;
-const Battle = () => <div style={{ padding: '120px 48px', textAlign: 'center' }}><h1>BATTLE ARENA</h1></div>;
-const Learn = () => <div style={{ padding: '120px 48px', textAlign: 'center' }}><h1>LEARN MODE</h1></div>;
+// IMPORT YOUR ACTUAL PAGES HERE:
+import Home from './pages/Home';
+
+// Keep placeholders for the ones we haven't built yet
+import Profile from './pages/Profile';
+import Guild from './pages/Guild';
+import Battle from './pages/Battle';
+import Learn from './pages/Learn';
 
 export default function App() {
   const [isAuthOpen, setIsAuthOpen] = useState(false);

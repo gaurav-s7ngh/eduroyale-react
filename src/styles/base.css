@@ -51,14 +51,16 @@ body::before {
 /* ── CURSOR ── */
 .cur {
   position: fixed; width: 20px; height: 20px;
-  pointer-events: none; z-index: 9999;
+  pointer-events: none; 
+  z-index: 99999; /* <-- INCREASED THIS */
   transform: translate(-50%,-50%);
   font-size: 18px; line-height: 1;
   image-rendering: pixelated;
 }
 .cur-r {
   position: fixed; width: 40px; height: 40px;
-  pointer-events: none; z-index: 9998;
+  pointer-events: none; 
+  z-index: 99998; /* <-- INCREASED THIS */
   transform: translate(-50%,-50%);
   border: 3px solid rgba(61,255,154,.55);
   clip-path: polygon(
@@ -67,7 +69,6 @@ body::before {
     calc(100% - 5px) 100%,5px 100%,5px calc(100% - 5px),0 calc(100% - 5px)
   );
 }
-
 /* ── BG CANVAS ── */
 #bgC {
   position: fixed; inset: 0; z-index: 0;
