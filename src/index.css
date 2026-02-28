@@ -1,3 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── RETRO CRT EFFECTS & CURSOR ── */
+body {
+  background-color: #06050f;
+  color: #f0eeff;
+  cursor: crosshair; /* Fallback cursor */
+}
+
+/* Adds the TV Scanline effect over the whole app */
+body::after {
+  content: '';
+  position: fixed; inset: 0; z-index: 9990;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px
+  );
+}
+
+/* Custom Fonts (Add to index.html if you haven't!) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+.font-pixel { font-family: 'Press Start 2P', monospace; }
+.font-terminal { font-family: 'VT323', monospace; }
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
